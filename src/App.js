@@ -4,20 +4,17 @@ import { TechProjects } from "./components/TechProjects/TechProjects";
 import { Home } from "./components/Home/Home";
 import { About } from "./components/About/About";
 import { Photography } from "./components/Photography/Photography";
+import { Footprints } from "./components/Footprints/Footprints";
 
 import "./App.css";
 
 import { Nav } from "./components/Nav/Nav";
-// import { Home } from './components/Home/Home';
 
 function App() {
   const [home, setHome] = useState(true);
-  //   console.log(window.location.pathname);
   useEffect(() => {
     window.location.pathname === "/" ? setHome(true) : setHome(false);
   });
-
-  // check the url path, if '/' opaque false if '/*' opaque trye
 
   return (
     <>
@@ -34,6 +31,9 @@ function App() {
         </Route>
         <Route path="/photography">
           <Photography></Photography>
+        </Route>
+        <Route path="/footprints">
+          <Footprints></Footprints>
         </Route>
       </Switch>
     </>
