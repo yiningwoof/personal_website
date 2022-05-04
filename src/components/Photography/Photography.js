@@ -10,15 +10,6 @@ export const Photography = () => {
   const baseAPIUrl =
     "https://yining-wang-portfolio-photo.herokuapp.com/api/v1/photos/";
 
-  // const [home, setHome] = useState([]);
-  // const [animals, setAnimals] = useState([]);
-  // const [plants, setPlants] = useState([]);
-  // const [civilization, setCivilization] = useState([]);
-  // const [lights, setLights] = useState([]);
-  // const [manWild, setManWild] = useState([]);
-  // const [mountains, setMountains] = useState([]);
-  // const [homed, setHomed] = useState([]);
-
   const [category, setCategory] = useState("");
   const [initial, setInitial] = useState(true);
   const [photos, setPhotos] = useState([]);
