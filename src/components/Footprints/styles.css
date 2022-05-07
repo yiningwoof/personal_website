@@ -1,0 +1,25 @@
+.pageContainer {
+	padding-top: 6vh;
+	height: 88vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: horizontal;
+}
+
+.controllerContainer {
+	height: 100%;
+	width: 40%;
+}
+
+.mapContainer {
+	display: block;
+	height: 97vh;
+	min-width: 350px;
+	width: 60%;
+}
+
+.sliderContainer {
+	min-width: 20px;
+	width: 100%;
+	padding: 20px;
+}
