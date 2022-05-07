@@ -11,7 +11,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "aws-sdk": "^2.636.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.2",
     "gh-pages": "^2.2.0",
     "material-ui": "^0.20.2",
     "rc-slider": "^10.0.0",
