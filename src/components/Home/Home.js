@@ -6,9 +6,7 @@ export const Home = () => {
     <div>
       <img
         className="home"
-        src="medicine_lake.JPG"
-        // width="100vw"
-        // height="100vh"
+        src="rilakkuma.jpg"
         alt="colorful sunset with hill and trees on the foreground"
       ></img>
     </div>

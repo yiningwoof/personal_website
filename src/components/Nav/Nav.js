@@ -17,15 +17,6 @@ export const Nav = ({ home }) => {
           <li color="inherit">Home</li>
         </Link>
         <Link id={"nav__resume-link"} className={"nav__link"} to="/about">
-          {/* <a
-          className="nav__link"
-          color="inherit"
-          href="resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a> */}
           About
         </Link>
         <Link
@@ -41,6 +32,13 @@ export const Nav = ({ home }) => {
           to="/photography"
         >
           <li color="inherit">Photography</li>
+        </Link>
+        <Link
+          id={"nav__footprints-link"}
+          className={"nav__link"}
+          to="/footprints"
+        >
+          <li color="inherit">Footprints</li>
         </Link>
       </ul>
     </nav>

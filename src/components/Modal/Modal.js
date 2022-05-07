@@ -23,7 +23,7 @@ export const Modal = ({ display, inspectedPhoto, photoUrl, close }) => {
         <img src={photoUrl} alt={inspectedPhoto.title}></img>
         <div className="caption">
           <p className="title">{inspectedPhoto.title}</p>
-          <p className="location">{inspectedPhoto.location}</p>
+          <p className="location">{`(${inspectedPhoto.location})`}</p>
         </div>
       </div>
     </div>
