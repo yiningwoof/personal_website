@@ -8,7 +8,7 @@ import "./styles.css";
 
 export const Photography = () => {
 	const baseAPIUrl =
-		"https://wang-personal-website-api-9f85cd6bf408.herokuapp.com//api/v1/photos/";
+		"https://wang-personal-website-api-9f85cd6bf408.herokuapp.com/api/v1/photos/";
 
 	const [category, setCategory] = useState("");
 	const [initial, setInitial] = useState(true);
