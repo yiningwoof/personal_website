@@ -87,6 +87,7 @@ export const Photography = () => {
       <Grid container columns={{ xs: 1, sm: 1, md: 12 }} spacing={2}>
         {photos.map((photo) => {
           let photoUrl = `https://s3.us-east-2.amazonaws.com/yiningwang.io/${photo.filename}`;
+          let thumbnailUrl = `https://s3.us-east-2.amazonaws.com/yiningwang.io/thumbnails/${photo.filename}`;
           return (
             <Grid
               item
@@ -99,7 +100,7 @@ export const Photography = () => {
               }}
               onClick={() => inspectPhoto(photo, photoUrl)}
             >
-              <Img src={photoUrl} loading={'lazy'}></Img>
+              <Img src={thumbnailUrl} loading={'lazy'}></Img>
             </Grid>
           );
         })}
