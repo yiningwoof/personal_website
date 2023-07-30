@@ -6,7 +6,6 @@
 
 .gallery-nav ul {
   list-style: none;
-  /* margin-right: 10px; */
 }
 
 .gallery-nav ul li {
@@ -15,16 +14,12 @@
 }
 
 .category-button {
-  /* width: 12.5%; */
   display: block;
-  /* width: 115px; */
-  /* height: 25px; */
 
   padding: 5px;
   text-align: center;
   border-radius: 5px;
   cursor: pointer;
-  /* font-weight: bold; */
 }
 
 .category-button:hover {
@@ -41,7 +36,6 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   position: relative;
   margin: 30px 10vw 30px 10vw;
-  /* grid-auto-rows: 1fr; */
 }
 
 .grid-item {
