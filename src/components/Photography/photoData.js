@@ -21,20 +21,6 @@ const photoData = [
     categories: ['home', 'plants'],
   },
   {
-    filename: 'banff.jpg',
-    title: 'Stripes',
-    location: 'Banff, AB, Canada',
-    year: 2017,
-    categories: ['home', 'mountains'],
-  },
-  {
-    filename: 'medicine_lake.jpg',
-    title: 'Tranquil',
-    location: 'AB, Canada',
-    year: 2017,
-    categories: ['home', 'mountains'],
-  },
-  {
     filename: 'montserrat2.jpg',
     title: 'Chasing the Carribean Blue',
     location: 'Montserrat',
@@ -74,7 +60,7 @@ const photoData = [
     title: 'Northern trees',
     location: 'Seattle, WA, USA',
     year: 2018,
-    categories: ['home', 'plants', 'mountains'],
+    categories: ['home', 'plants', 'mountains', 'waters'],
   },
   {
     filename: 'seattle8.jpg',
@@ -111,13 +97,6 @@ const photoData = [
     year: 2016,
     categories: ['home', 'civilization', 'homed', 'lights'],
   },
-  {
-    filename: 'banff.jpg',
-    title: 'Stripes',
-    location: 'Banff, AB, Canada',
-    year: 2017,
-    categories: ['home', 'mountains'],
-  },
 
   // 'animals'
   {
@@ -149,18 +128,25 @@ const photoData = [
     categories: ['homed', 'animals'],
   },
   {
-    filename: 'giraffe.jpg',
-    title: 'Giraffe',
-    location: 'San Antonio, TX, USA',
-    year: 2018,
-    categories: ['animals'],
-  },
-  {
     filename: 'natural_bridge6.jpg',
     title: 'Posing',
     location: 'San Antonio, TX, USA',
     year: 2018,
     categories: ['animals'],
+  },
+  {
+    filename: 'geico.jpg',
+    title: 'Geico',
+    location: 'New Orleans, Louisiana, USA',
+    year: 2019,
+    categories: ['animals'],
+  },
+  {
+    filename: 'golden_gate.jpg',
+    title: 'Bird over golden gate',
+    location: 'San Francisco, CA, USA',
+    year: 2017,
+    categories: ['animals', 'civilization'],
   },
 
   // 'civilization'
@@ -177,6 +163,20 @@ const photoData = [
     location: 'Banff, AB, Canada',
     year: 2017,
     categories: ['civilization', 'man_wild', 'mountains'],
+  },
+  {
+    filename: 'bikers.jpg',
+    title: 'Bikers on golden gate',
+    location: 'San Francisco, CA, USA',
+    year: 2017,
+    categories: ['man_wild', 'civilization'],
+  },
+  {
+    filename: 'golden_bird.jpg',
+    title: 'Rusty bridge',
+    location: 'San Francisco, CA, USA',
+    year: 2017,
+    categories: ['animals', 'civilization'],
   },
   {
     filename: 'louisiana5.jpg',
@@ -197,7 +197,7 @@ const photoData = [
     title: 'Modern Pompeii',
     location: 'Montserrat',
     year: 2017,
-    categories: ['civilization', 'man_wild'],
+    categories: ['civilization', 'man_wild', 'mountains'],
   },
   {
     filename: 'seattle7.jpg',
@@ -235,11 +235,11 @@ const photoData = [
     categories: ['homed', 'civilization'],
   },
   {
-    filename: 'banff.jpg',
-    title: 'Stripes',
-    location: 'Banff, AB, Canada',
-    year: 2017,
-    categories: ['home', 'mountains'],
+    filename: 'london_eye.jpg',
+    title: 'London Eye',
+    location: 'London, UK',
+    year: 2016,
+    categories: ['civilization', 'lights'],
   },
 
   // 'homed'
@@ -255,14 +255,7 @@ const photoData = [
     title: 'Lost Maples',
     location: 'TX, USA',
     year: 2018,
-    categories: ['homed', 'civilization'],
-  },
-  {
-    filename: 'toronto4.jpg',
-    title: 'First snow upon University College',
-    location: 'Toronto, ON, Canada',
-    year: 2016,
-    categories: ['homed', 'civilization'],
+    categories: ['homed', 'waters'],
   },
   {
     filename: 'toronto9.jpg',
@@ -276,14 +269,7 @@ const photoData = [
     title: 'Scarborough Bluffs',
     location: 'Toronto, ON, Canada',
     year: 2016,
-    categories: ['homed', 'man_wild'],
-  },
-  {
-    filename: 'banff.jpg',
-    title: 'Stripes',
-    location: 'Banff, AB, Canada',
-    year: 2017,
-    categories: ['home', 'mountains'],
+    categories: ['homed', 'man_wild', 'waters'],
   },
 
   // 'lights'
@@ -308,6 +294,13 @@ const photoData = [
     year: 2016,
     categories: ['lights'],
   },
+  {
+    filename: 'milky_way.jpg',
+    title: 'Milky way over Bagdad',
+    location: 'Bagdad, AZ, USA',
+    year: 2018,
+    categories: ['lights'],
+  },
 
   // 'man_wild'
   {
@@ -323,6 +316,29 @@ const photoData = [
     location: 'Montserrat',
     year: 2017,
     categories: ['man_wild'],
+  },
+
+  // 'waters'
+  {
+    filename: 'cascades.jpg',
+    title: 'Cascades',
+    location: 'Austin, TX, USA',
+    year: 2018,
+    categories: ['mountains', 'waters'],
+  },
+  {
+    filename: 'carribean_sunset.jpg',
+    title: 'Carribean sunset',
+    location: 'Antigua',
+    year: 2017,
+    categories: ['mountains', 'waters'],
+  },
+  {
+    filename: 'medicine_lake.jpg',
+    title: 'Tranquil',
+    location: 'AB, Canada',
+    year: 2017,
+    categories: ['mountains', 'waters'],
   },
 
   // 'mountains'
@@ -373,7 +389,7 @@ const photoData = [
     title: 'Yoho',
     location: 'AB, Canada',
     year: 2017,
-    categories: ['mountains'],
+    categories: ['mountains', 'waters'],
   },
   {
     filename: 'golden_hill.jpg',
@@ -381,6 +397,13 @@ const photoData = [
     location: 'Arizona, USA',
     year: 2018,
     categories: ['home', 'mountains'],
+  },
+  {
+    filename: 'scottish_highland.jpg',
+    title: 'Scottish highlands',
+    location: 'Edinburgh, TX, USA',
+    year: 2016,
+    categories: ['man_wild', 'mountains', 'waters'],
   },
   {
     filename: 'seattle12.jpg',
@@ -402,13 +425,6 @@ const photoData = [
     location: 'TX, USA',
     year: 2018,
     categories: ['plants'],
-  },
-  {
-    filename: 'cherry2.jpg',
-    title: 'Cherry blossom',
-    location: 'Toronto, ON, Canada',
-    year: 2016,
-    categories: ['plants', 'homed'],
   },
   {
     filename: 'christmas.jpg',
