@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import photoData from './photoData.js';
-import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-
 import { Modal } from '../Modal/Modal.js';
+import BlurredUpImage from './BlurredUpImage.js';
 
 import './styles.css';
 
@@ -12,16 +11,9 @@ export const Photography = () => {
   const [photos, setPhotos] = useState([]);
   const [inspectedPhoto, setInspectedPhoto] = useState({});
   const [inspectedPhotoUrl, setInspectedPhotoUrl] = useState('');
+  const [inspectedPhotoPlaceholderUrl, setInspectedPhotoPlaceholderUrl] =
+    useState('');
   const [allowScroll, setAllowScroll] = useState(true);
-
-  const Img = styled('img')({
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-    borderRadius: '10%',
-    overflow: 'hidden',
-  });
 
   const categories = {
     Home: 'home',
@@ -32,6 +24,7 @@ export const Photography = () => {
     'Man vs. Wild': 'man_wild',
     Mountains: 'mountains',
     Homed: 'homed',
+    Waters: 'waters',
   };
 
   const chooseCategory = (cat) => {
@@ -43,15 +36,17 @@ export const Photography = () => {
     setPhotos(photosInCat);
   };
 
-  const inspectPhoto = (photo, photoUrl) => {
+  const inspectPhoto = (photo, photoUrl, placeholderUrl) => {
     setInspectedPhoto(photo);
     setInspectedPhotoUrl(photoUrl);
+    setInspectedPhotoPlaceholderUrl(placeholderUrl);
     setAllowScroll(false);
   };
 
   const closeModal = () => {
     setInspectedPhoto({});
     setInspectedPhotoUrl('');
+    setInspectedPhotoPlaceholderUrl('');
     setAllowScroll(true);
   };
 
@@ -71,7 +66,7 @@ export const Photography = () => {
         <h2>Categories</h2>
         <ul>
           {Object.keys(categories).map((cat) => (
-            <li>
+            <li key={`category ${cat}`}>
               <a
                 className={`category-button${
                   category === cat ? ' active' : ''
@@ -86,8 +81,9 @@ export const Photography = () => {
       </div>
       <Grid container columns={{ xs: 1, sm: 1, md: 12 }} spacing={2}>
         {photos.map((photo) => {
-          let photoUrl = `https://s3.us-east-2.amazonaws.com/yiningwang.io/${photo.filename}`;
+          let originalUrl = `https://s3.us-east-2.amazonaws.com/yiningwang.io/high_res/${photo.filename}`;
           let thumbnailUrl = `https://s3.us-east-2.amazonaws.com/yiningwang.io/thumbnails/${photo.filename}`;
+          let placeholderUrl = `https://s3.us-east-2.amazonaws.com/yiningwang.io/placeholders/${photo.filename}`;
           return (
             <Grid
               item
@@ -98,9 +94,13 @@ export const Photography = () => {
                 width: '100%',
                 height: '300px',
               }}
-              onClick={() => inspectPhoto(photo, photoUrl)}
+              onClick={() => inspectPhoto(photo, originalUrl, placeholderUrl)}
             >
-              <Img src={thumbnailUrl} loading={'lazy'}></Img>
+              <BlurredUpImage
+                blurImg={placeholderUrl}
+                srcImg={thumbnailUrl}
+                isModal={false}
+              ></BlurredUpImage>
             </Grid>
           );
         })}
@@ -109,6 +109,7 @@ export const Photography = () => {
         display={Object.keys(inspectedPhoto).length === 0 ? false : true}
         inspectedPhoto={inspectedPhoto}
         photoUrl={inspectedPhotoUrl}
+        placeholderUrl={inspectedPhotoPlaceholderUrl}
         close={closeModal}
       ></Modal>
     </div>
