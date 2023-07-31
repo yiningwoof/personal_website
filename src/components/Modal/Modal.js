@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import BlurredUpImage from '../Photography/BlurredUpImage';
 
 import './styles.css';
 
-export const Modal = ({ display, inspectedPhoto, photoUrl, close }) => {
+export const Modal = ({
+  display,
+  inspectedPhoto,
+  photoUrl,
+  placeholderUrl,
+  close,
+}) => {
   const [modalDisplay, setModalDisplay] = useState(false);
 
   useEffect(() => {
@@ -19,8 +26,11 @@ export const Modal = ({ display, inspectedPhoto, photoUrl, close }) => {
       onClick={() => close()}
     >
       <div className='modal'>
-        {console.log(inspectedPhoto.url)}
-        <img src={photoUrl} alt={'abc'}></img>
+        <BlurredUpImage
+          blurImg={placeholderUrl}
+          srcImg={photoUrl}
+          isModal={true}
+        />
         <div className='caption'>
           <p className='title'>{inspectedPhoto.title}</p>
           <p className='location'>{`(${inspectedPhoto.location})`}</p>
